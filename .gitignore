@@ -9,6 +9,6 @@ Thumbs.db
 Desktop.ini
 
 # Environment and IDE
-.env
-.vscode/
 .idea/
+config.bat
+node_modules
