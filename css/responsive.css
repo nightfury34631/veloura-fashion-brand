@@ -1,0 +1,341 @@
+/* Zoom-safe responsive layout: breakpoints use the effective viewport width. */
+@media (max-width: 1100px) {
+  header {
+    gap: 20px;
+    padding-inline: 4%;
+  }
+  nav {
+    gap: 18px;
+  }
+  .section {
+    padding-inline: 4%;
+  }
+  .product-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .shop-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  footer {
+    grid-template-columns: 2fr repeat(2, 1fr);
+  }
+  footer > div:first-child {
+    grid-row: span 2;
+  }
+  .cart-item {
+    grid-template-columns: 90px minmax(0, 1fr) 85px 115px;
+    gap: 14px;
+  }
+  .cart-item > b:last-child {
+    display: none;
+  }
+}
+
+@media (max-width: 850px) {
+  .announcement small,
+  .announcement span {
+    display: none;
+  }
+  header {
+    height: 62px;
+    gap: 14px;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  nav {
+    display: none;
+  }
+  .header-actions {
+    margin-left: auto;
+    gap: 14px;
+  }
+  .mobile-nav {
+    position: fixed;
+    z-index: 19;
+    top: 91px;
+    left: 0;
+    right: 0;
+    padding: 18px 5%;
+    background: var(--cream);
+    border-bottom: 1px solid var(--line);
+    transform: translateY(-130%);
+    transition: 0.3s;
+  }
+  .mobile-nav.open {
+    transform: translateY(0);
+  }
+  .mobile-nav a {
+    display: block;
+    padding: 10px 0;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+  }
+  .hero {
+    min-height: 570px;
+    grid-template-columns: 45% 55%;
+  }
+  .hero-copy {
+    padding: 65px 8% 40px;
+  }
+  .hero h1 {
+    font-size: clamp(40px, 6vw, 55px);
+  }
+  .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .product-page {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .gallery .main-image {
+    height: min(65vw, 520px);
+  }
+  .edit-copy {
+    padding-inline: 10%;
+  }
+  .newsletter {
+    align-items: flex-start;
+    gap: 24px;
+  }
+  .newsletter form {
+    flex: 1;
+    min-width: 0;
+  }
+  .newsletter input {
+    width: 100%;
+    min-width: 0;
+  }
+  .contact {
+    gap: 8%;
+  }
+}
+
+@media (max-width: 640px) {
+  .announcement {
+    font-size: 9px;
+  }
+  .brand {
+    font-size: 26px;
+  }
+  .header-actions a:first-of-type {
+    display: none;
+  }
+  .hero {
+    min-height: 620px;
+    display: block;
+    position: relative;
+  }
+  .hero img {
+    position: absolute;
+    inset: 0;
+    object-position: 63% center;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      #f7f4eefa 15%,
+      #f7f4eeaa 65%,
+      transparent
+    );
+  }
+  .hero-copy {
+    position: relative;
+    z-index: 1;
+    padding: 80px 8%;
+  }
+  .hero h1 {
+    font-size: clamp(40px, 12vw, 48px);
+  }
+  .section {
+    padding: 45px 5%;
+  }
+  .category-grid,
+  .product-grid,
+  .shop-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .category-grid {
+    gap: 5px;
+  }
+  .category-card {
+    height: 185px;
+    padding: 13px;
+  }
+  .category-card span {
+    font-size: 23px;
+  }
+  .product-image,
+  .shop-grid .product-image {
+    height: 210px;
+  }
+  .edit {
+    grid-template-columns: 1fr;
+  }
+  .edit-image {
+    height: 260px;
+  }
+  .edit-copy {
+    padding: 50px 8%;
+  }
+  .edit-copy h2 {
+    font-size: clamp(30px, 9vw, 34px);
+  }
+  .values {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px 15px;
+  }
+  .newsletter,
+  .shop-controls,
+  .filter-row {
+    display: block;
+  }
+  .newsletter form {
+    margin-top: 20px;
+  }
+  footer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+  }
+  footer > div:first-child {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+  .search {
+    width: 100%;
+    margin-bottom: 14px;
+  }
+  .filter-row .filter-tabs {
+    gap: 13px;
+  }
+  .page h1,
+  .contact h1 {
+    font-size: clamp(38px, 12vw, 48px);
+  }
+  .cart-item {
+    grid-template-columns: 75px minmax(0, 1fr) 70px;
+    gap: 10px;
+  }
+  .cart-item img {
+    width: 70px;
+    height: 85px;
+  }
+  .cart-item .qty {
+    grid-column: 2;
+    margin: 0;
+  }
+  .cart-summary {
+    width: 100%;
+  }
+  .gallery .main-image {
+    height: min(105vw, 450px);
+  }
+  .product-info h1 {
+    font-size: 38px;
+  }
+  .about-hero {
+    height: 420px;
+  }
+  .about-hero > div {
+    left: 6%;
+    bottom: 35px;
+  }
+  .about-hero h1 {
+    font-size: 47px;
+  }
+  .story-grid,
+  .contact {
+    grid-template-columns: 1fr;
+  }
+  .contact {
+    gap: 40px;
+  }
+  .section-top {
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .section-top h2 {
+    font-size: 27px;
+  }
+  .text-link {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 390px) {
+  .section-top {
+    display: block;
+  }
+  .section-top .text-link {
+    display: inline-block;
+    margin-top: 14px;
+  }
+  .newsletter form {
+    flex-direction: column;
+  }
+  .newsletter .button {
+    width: 100%;
+    text-align: center;
+  }
+  .product-image,
+  .shop-grid .product-image {
+    height: 180px;
+  }
+}
+
+/* Match the contained sections instead of making the Everyday Edit full-bleed. */
+.edit {
+  width: 89%;
+  margin-inline: auto;
+}
+.edit {
+  overflow: hidden;
+}
+.edit-image img {
+  transition:
+    transform 0.65s ease,
+    filter 0.65s ease;
+}
+.edit-copy {
+  transition: transform 0.45s ease;
+}
+.edit:hover .edit-image img,
+.edit:focus-within .edit-image img {
+  transform: scale(1.045);
+  filter: brightness(0.8);
+}
+.edit:hover .edit-copy,
+.edit:focus-within .edit-copy {
+  transform: translateX(8px);
+}
+.edit .text-link {
+  transition: letter-spacing 0.3s ease;
+}
+.edit:hover .text-link,
+.edit:focus-within .text-link {
+  letter-spacing: 0.18em;
+}
+
+@media (max-width: 1100px) {
+  .edit {
+    width: 92%;
+  }
+}
+
+@media (max-width: 640px) {
+  .edit {
+    width: 90%;
+  }
+  .edit:hover .edit-copy,
+  .edit:focus-within .edit-copy {
+    transform: none;
+  }
+}

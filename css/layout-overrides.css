@@ -1,0 +1,21 @@
+/* Final homepage sizing adjustments. */
+.campaign-video {
+  margin-top: 44px;
+}
+
+.campaign-video .video-placeholder {
+  height: 360px;
+  width: 82%;
+  margin-inline: auto;
+}
+
+@media (max-width: 650px) {
+  .campaign-video {
+    margin-top: 28px;
+  }
+
+  .campaign-video .video-placeholder {
+    height: 260px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>Shop — Veloura</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+
+  <body>
+    <div id="site-header"></div>
+
+    <main class="page section">
+      <p class="eyebrow">The collection</p>
+
+      <h1>Shop</h1>
+
+      <p class="intro">Explore the Veloura collection.</p>
+
+      <div class="shop-controls">
+        <label class="search">
+          <i data-lucide="search"></i>
+          <input id="shop-search" placeholder="Search products..." />
+        </label>
+
+        <select id="shop-sort" aria-label="Sort products">
+          <option value="featured">Featured</option>
+          <option value="newest">Newest</option>
+          <option value="low">Price: Low → High</option>
+          <option value="high">Price: High → Low</option>
+          <option value="name">Name: A → Z</option>
+        </select>
+      </div>
+
+      <div class="filter-row">
+        <!-- CATEGORY FILTERS -->
+
+        <div class="filter-tabs" id="shop-categories">
+          <button class="active" data-category="all">All</button>
+
+          <button data-category="men">Men</button>
+
+          <button data-category="women">Women</button>
+
+          <button data-category="accessories">Accessories</button>
+
+          <button data-category="bags">Bags</button>
+        </div>
+
+        <!-- BDT PRICE FILTERS -->
+
+        <div class="filter-tabs" id="price-filters">
+          <button class="active" data-price="all">All Prices</button>
+
+          <button data-price="under3000">Under ৳3,000</button>
+
+          <button data-price="3000to5000">৳3,000–৳5,000</button>
+
+          <button data-price="5000plus">Over ৳5,000</button>
+        </div>
+      </div>
+
+      <p id="search-result" class="result-note"></p>
+
+      <div class="product-grid shop-grid" id="shop-products"></div>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <div id="site-ui"></div>
+
+    <script src="js/products.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/shop.js"></script>
+  </body>
+</html>

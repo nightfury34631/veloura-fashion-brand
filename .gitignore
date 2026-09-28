@@ -1,0 +1,14 @@
+# Archives & Backups
+*.zip
+*.tar.gz
+*.rar
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Environment and IDE
+.env
+.vscode/
+.idea/

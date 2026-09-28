@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Product — Veloura</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <div id="site-header"></div>
+    <main class="product-page section" id="product-detail"></main>
+    <section class="section related">
+      <p class="eyebrow">You may also like</p>
+      <h2>Related pieces</h2>
+      <div class="carousel" data-carousel>
+        <button
+          class="carousel-arrow previous"
+          aria-label="Previous related products"
+        >
+          ←
+        </button>
+        <div class="carousel-track" id="related-products"></div>
+        <button class="carousel-arrow next" aria-label="Next related products">
+          →
+        </button>
+      </div>
+    </section>
+    <div id="site-footer"></div>
+    <div id="site-ui"></div>
+    <script src="js/products.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/product.js"></script>
+  </body>
+</html>
